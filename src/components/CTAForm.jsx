@@ -9,14 +9,14 @@ function CTAForm() {
   const [sent, setSent] = useState(false)
 
   const whatsappUrl = useMemo(() => {
-    const text = encodeURIComponent(`היי, אני ${name || '—'} מ${company || '—'}. מעוניין/ת בשיחה עם הצוות שלכם.`)
+    const text = encodeURIComponent(`Hey, I'm ${name || '—'} from ${company || '—'}. I'd love to chat about growth.`)
     return `https://wa.me/972501234567?text=${text}`
   }, [name, company])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
-    // No backend yet – simulate lead capture then redirect to WhatsApp
+    // Simulate lead capture then redirect to WhatsApp
     setTimeout(() => {
       setSent(true)
       setLoading(false)
@@ -28,9 +28,9 @@ function CTAForm() {
     <section id="contact" className="relative bg-slate-950 py-16">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_300px_at_50%_-50px,rgba(168,85,247,0.14),transparent)]" />
       <div className="relative mx-auto max-w-7xl px-6">
-        <div className="mb-8 text-right">
-          <h2 className="text-3xl font-black tracking-tight text-white">בואו נבדוק התאמה</h2>
-          <p className="mt-2 text-slate-300">השאירו פרטים לשיחה קצרה – ואם יש התאמה, נבנה תוכנית עד לרמת KPI.</p>
+        <div className="mb-8 text-left">
+          <h2 className="text-3xl font-black tracking-tight text-white">Let’s check fit</h2>
+          <p className="mt-2 text-slate-300">Leave details for a quick intro — if there’s a fit, we’ll build an action plan to KPIs.</p>
         </div>
 
         <motion.form
@@ -42,28 +42,25 @@ function CTAForm() {
         >
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             <input
-              dir="rtl"
               type="text"
-              placeholder="שם מלא"
+              placeholder="Full name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="rounded-xl border border-slate-700 bg-slate-950/60 px-4 py-3 text-right text-slate-100 placeholder-slate-500 outline-none ring-0 focus:border-fuchsia-500"
+              className="rounded-xl border border-slate-700 bg-slate-950/60 px-4 py-3 text-slate-100 placeholder-slate-500 outline-none ring-0 focus:border-fuchsia-500"
             />
             <input
-              dir="rtl"
               type="tel"
-              placeholder="טלפון"
+              placeholder="Phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="rounded-xl border border-slate-700 bg-slate-950/60 px-4 py-3 text-right text-slate-100 placeholder-slate-500 outline-none ring-0 focus:border-fuchsia-500"
+              className="rounded-xl border border-slate-700 bg-slate-950/60 px-4 py-3 text-slate-100 placeholder-slate-500 outline-none ring-0 focus:border-fuchsia-500"
             />
             <input
-              dir="rtl"
               type="text"
-              placeholder="שם חברה"
+              placeholder="Company"
               value={company}
               onChange={(e) => setCompany(e.target.value)}
-              className="rounded-xl border border-slate-700 bg-slate-950/60 px-4 py-3 text-right text-slate-100 placeholder-slate-500 outline-none ring-0 focus:border-fuchsia-500"
+              className="rounded-xl border border-slate-700 bg-slate-950/60 px-4 py-3 text-slate-100 placeholder-slate-500 outline-none ring-0 focus:border-fuchsia-500"
             />
           </div>
 
@@ -72,7 +69,7 @@ function CTAForm() {
               href={whatsappUrl}
               className="rounded-xl bg-emerald-500/90 px-5 py-3 text-white hover:bg-emerald-500"
             >
-              או כתבו לנו ב־WhatsApp
+              Or ping us on WhatsApp
             </a>
 
             <button
@@ -80,7 +77,7 @@ function CTAForm() {
               disabled={loading}
               className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-bold text-white disabled:opacity-70"
             >
-              {loading ? 'שולח…' : sent ? 'נשלח!' : 'לקביעת שיחה'}
+              {loading ? 'Sending…' : sent ? 'Sent!' : 'Book a call'}
             </button>
           </div>
         </motion.form>

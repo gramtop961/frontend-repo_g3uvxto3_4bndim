@@ -4,23 +4,23 @@ import { Rocket, Gauge, LineChart, Sparkles } from 'lucide-react'
 const services = [
   {
     icon: Rocket,
-    title: 'צמיחה מואצת',
-    desc: 'תכנון והקמה של משפכי שיווק מלאים – מדיה, דפי נחיתה, אוטומציות והמרה.',
+    title: 'Accelerated Growth',
+    desc: 'Full-funnel builds — media, landing systems, automation and CRO.',
   },
   {
     icon: Gauge,
-    title: 'מדידה בזמן אמת',
-    desc: 'דאשבורדים חיים, ניסויים רציפים ו־A/B שמתרגמים דאטה להחלטות.',
+    title: 'Live Measurement',
+    desc: 'Realtime dashboards, continuous experimentation and A/B that turn data into action.',
   },
   {
     icon: LineChart,
-    title: 'פרסום ממומן מנצח',
-    desc: 'Google, Meta, TikTok ו־LinkedIn עם AI אופרטיבי שמוריד CPA ומגדיל ROAS.',
+    title: 'Paid Media That Wins',
+    desc: 'Google, Meta, TikTok and LinkedIn powered by operational AI to reduce CPA and scale ROAS.',
   },
   {
     icon: Sparkles,
-    title: 'קריאייטיב שממיר',
-    desc: 'סטודיו אינהאוס לוידאו, UGC ותוכן קצר שיורה בול על הקהל שלכם.',
+    title: 'Creative That Converts',
+    desc: 'In‑house studio for video, UGC and short‑form content engineered to hit intent.',
   },
 ]
 
@@ -29,9 +29,9 @@ function Services() {
     <section id="services" className="relative bg-slate-950 py-16 sm:py-24">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_300px_at_50%_-50px,rgba(34,211,238,0.15),transparent)]" />
       <div className="relative mx-auto max-w-7xl px-6">
-        <div className="mb-12 text-right">
-          <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl">מה אנחנו עושים</h2>
-          <p className="mt-2 text-slate-300">חיבור חכם בין טכנולוגיה, מדיה וקריאייטיב שמייצר תוצאות מדידות.</p>
+        <div className="mb-12 text-left">
+          <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl">What we do</h2>
+          <p className="mt-2 text-slate-300">A tight integration of tech, media and creative that delivers measurable results.</p>
         </div>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -42,7 +42,7 @@ function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ delay: i * 0.05, duration: 0.5 }}
-              className="group relative overflow-hidden rounded-2xl border border-slate-800 bg-gradient-to-b from-slate-900/60 to-slate-900/20 p-6 text-right backdrop-blur-md"
+              className="group relative overflow-hidden rounded-2xl border border-slate-800 bg-gradient-to-b from-slate-900/60 to-slate-900/20 p-6 text-left backdrop-blur-md"
             >
               <div className="mb-4 inline-flex rounded-xl border border-fuchsia-400/30 bg-slate-900/60 p-3 text-fuchsia-300">
                 <s.icon className="h-6 w-6" />

@@ -9,16 +9,16 @@ const logos = [
 
 const reviews = [
   {
-    name: 'טל, מנכ"ל חברת SaaS',
-    text: 'בתוך 90 יום הכפלנו את קצב הלידים ושמרנו על איכות. סוף סוף יש לנו שליטה מלאה בנתונים.',
+    name: 'Tal, SaaS Founder',
+    text: 'In 90 days we doubled qualified pipeline with full visibility across the funnel.',
   },
   {
-    name: 'נועה, סמנכ"לית שיווק',
-    text: 'השילוב של קריאייטיב חד עם טירגוט מדויק וניתוח נתונים הפך את המדיה שלנו לרווחית.',
+    name: 'Noa, VP Marketing',
+    text: 'Sharp creative + precise targeting + measurement discipline turned media profitable.',
   },
   {
-    name: 'דוד, בעל חנות איקומרס',
-    text: 'ה־ROAS זינק והפאנל נמכר. קיבלנו צוות שחושב ומבצע כמו שלנו – רק יותר מהר.',
+    name: 'David, eCom Owner',
+    text: 'ROAS up, CAC down. They think like an in‑house team and move faster.',
   },
 ]
 
@@ -27,9 +27,9 @@ function SocialProof() {
     <section className="relative bg-slate-950 py-16">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(700px_300px_at_50%_-80px,rgba(168,85,247,0.12),transparent)]" />
       <div className="relative mx-auto max-w-7xl px-6">
-        <div className="mb-10 text-right">
-          <h2 className="text-3xl font-black tracking-tight text-white">מותגים שבוטחים בנו</h2>
-          <p className="mt-2 text-slate-300">ועשרות SMBs מצוינים שמתרחבים איתנו מדי רבעון.</p>
+        <div className="mb-10 text-left">
+          <h2 className="text-3xl font-black tracking-tight text-white">Trusted by modern brands</h2>
+          <p className="mt-2 text-slate-300">Plus dozens of top SMBs growing each quarter.</p>
         </div>
 
         {/* Logos */}
@@ -57,7 +57,7 @@ function SocialProof() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 text-right text-slate-200 backdrop-blur"
+              className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 text-left text-slate-200 backdrop-blur"
             >
               <p className="text-sm leading-7">“{r.text}”</p>
               <div className="mt-4 text-xs text-slate-400">{r.name}</div>
